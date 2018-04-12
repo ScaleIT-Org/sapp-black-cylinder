@@ -1,0 +1,6 @@
+version: '2'
+
+catalog:
+  name: "de-kit-black-cylinder"
+  version: "1.0"
+  description: "Nutzen Digital Twin"

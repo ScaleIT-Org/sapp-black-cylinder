@@ -1,0 +1,34 @@
+version: '2'
+services:
+    de-kit-black-cylinder:
+        image: scaleit-app-pool.ondics.de:5000/scaleit-app-pool/de-kit-black-cylinder:1.0
+        ports:
+          - "51102:80"
+
+    de-kit-black-cylinder-sidecar-registration:
+        image: scaleit-app-pool.ondics.de:5000/scaleit-app-pool/de-kit-sidecar-registration:1.0
+        environment:
+          - ETCD_IP=10.0.0.200
+          - ETCD_PORT=49501
+          - APP_PORT=51102
+          - APP_ID=de-kit-black-cylinder_1
+          - APP_NAME=de-kit-black-cylinder
+          - APP_TITLE=Black Cylinder Nutzen
+          - APP_SHORTDESCRIPTION=Black Cylinder Nutzen Digital Twin
+          - APP_DESCRIPTION=Proof of Concept Black Cylinder Nutzen Digital Twin
+          - APP_CATEGORY=domainApp
+          - APP_STATUS=online
+          - APP_ICON_URL=http://10.0.0.200:51102/assets/icon/appHubIcon-de-kit-black-cylinder.png
+          - APP_USER_URL=http://10.0.0.200:51102/#/user
+          - APP_USER_DOC_URL=
+          - APP_USER_STATUS_URL=
+          - APP_DEV_DOC_URL=
+          - APP_DEV_SWAGGER_URL=
+          - APP_ADMIN_URL=http://10.0.0.200:51102/#/admin
+          - APP_ADMIN_CONFIG_URL=
+          - APP_ADMIN_DOC_URL=
+          - APP_ADMIN_LOG_URL=
+          - APP_ADMIN_STATUS_URL=
+          - APP_API_ENTRYPOINT=
+          - APP_UPDATEDAT=2018-04-11T12:32:16.581Z
+          - APP_TYPE=domainApp

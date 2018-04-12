@@ -1,0 +1,27 @@
+<ion-header>
+  <!-- Passing Data into the app-header component (for one way binding) -->
+  <app-header pageName=""></app-header>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      Nutzen 330409583
+    </ion-card-header>
+    <ion-card-content>
+      <img src="assets/imgs/kleinserie_frontpage_slider.jpg">
+     <!-- Image from https://www.basista.de/ -->
+      Nutzen zuletzt aktualisiert: {{ today| date:'yyyy-MM-dd HH:mm a z':'GMT+2'}} in Baden-Würrtemberg
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="secondary">
+    <ion-card-header style="color: white">
+      STATUS: OK
+    </ion-card-header>
+  </ion-card>
+ </ion-content>
+
+<ion-footer>
+  <app-footer></app-footer>
+</ion-footer>

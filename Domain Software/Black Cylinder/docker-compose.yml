@@ -1,0 +1,6 @@
+version: '2'
+services:
+   de-kit-black-cylinder:
+        build: .
+        ports:
+          - "8100:80"

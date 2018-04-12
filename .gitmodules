@@ -1,0 +1,3 @@
+[submodule "Platform Sidecars/spsc-app-registration"]
+	path = Platform Sidecars/spsc-app-registration
+	url = https://github.com/ScaleIT-Org/spsc-app-registration.git
