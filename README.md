@@ -56,6 +56,19 @@ ports:
    - "8080:80"
 ```
 
+### Setting an API URL
+
+You can set an API URL in `src/environments/environment.ts` for development or in `src/environments/environment.prod.ts` for production.
+
+For example:
+```js
+export const environment = {
+  dummyData: false,
+  apiUrl: "http://my.fancy.host.example.com",
+  production: true
+};
+```
+
 ## Notes
 
 The `.gitkeep` files are just placeholders and can be deleted. This is due to the fact that git only checks in folders with files inside them.
